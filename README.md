@@ -1,4 +1,5 @@
 # aws-iam-privesc-detection# AWS IAM Privilege Escalation — Detection & Incident Response
+# AWS IAM Privilege Escalation — Detection & Incident Response
 
 ## Summary
 Deployed a deliberately vulnerable AWS IAM configuration (CloudGoat's `iam_privesc_by_rollback` scenario) and, operating as a restricted IAM user, identified and exploited a flaw allowing escalation from read-only IAM access to full administrative privileges by abusing the `iam:SetDefaultPolicyVersion` permission. Findings below are being expanded into a full incident-response writeup including detection and remediation guidance.
