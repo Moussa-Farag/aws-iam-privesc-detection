@@ -1,0 +1,20 @@
+{
+    "Events": [
+        {
+            "EventId": "cac5cf80-4e15-4887-9ca4-96237cb33f58",
+            "EventName": "SetDefaultPolicyVersion",
+            "ReadOnly": "false",
+            "AccessKeyId": "AKIAIOSFODNN7EXAMPLE",
+            "EventTime": "2026-09-04T02:01:51-04:00",
+            "EventSource": "iam.amazonaws.com",
+            "Username": "raynor-cgidwg95rcdjvv",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::Policy",
+                    "ResourceName": "arn:aws:iam::123456789012:policy/cg-raynor-policy-cgidwg95rcdjvv"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAURLZKY4MSUCLGG6BG\",\"arn\":\"arn:aws:iam::123456789012:user/raynor-cgidwg95rcdjvv\",\"accountId\":\"123456789012\",\"accessKeyId\":\"AKIAIOSFODNN7EXAMPLE\",\"userName\":\"raynor-cgidwg95rcdjvv\"},\"eventTime\":\"2026-09-04T06:01:51Z\",\"eventSource\":\"iam.amazonaws.com\",\"eventName\":\"SetDefaultPolicyVersion\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"173.59.53.120\",\"userAgent\":\"aws-cli/2.31.35 md/awscrt#1.0.0.dev0 ua/2.1 os/linux#6.6.87.2-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.14.4 md/pyimpl#CPython m/Z,E,b,n cfg/retry-mode#standard md/installer#source md/distrib#ubuntu.26 md/prompt#off md/command#iam.set-default-policy-version\",\"requestParameters\":{\"policyArn\":\"arn:aws:iam::123456789012:policy/cg-raynor-policy-cgidwg95rcdjvv\",\"versionId\":\"v3\"},\"responseElements\":null,\"requestID\":\"663b2de2-51ca-4a8a-9bf8-f19315547aa6\",\"eventID\":\"cac5cf80-4e15-4887-9ca4-96237cb33f58\",\"readOnly\":false,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"123456789012\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"iam.amazonaws.com\"}}"
+        }
+    ]
+}

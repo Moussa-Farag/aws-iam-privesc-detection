@@ -1,0 +1,2 @@
+
+An error occurred (UnauthorizedOperation) when calling the DescribeInstances operation: You are not authorized to perform this operation. User: arn:aws:iam::123456789012:user/raynor-cgidwg95rcdjvv is not authorized to perform: ec2:DescribeInstances because no identity-based policy allows the ec2:DescribeInstances action

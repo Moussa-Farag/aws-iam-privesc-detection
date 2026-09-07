@@ -1,0 +1,10 @@
+# Baseline: flag every SetDefaultPolicyVersion call for manual review (rare, high-privilege action)
+index=aws_cloudtrail eventName=SetDefaultPolicyVersion
+| table _time, userIdentity.arn, requestParameters.policyArn, requestParameters.versionId, sourceIPAddress
+
+# Correlation detection: recon (ListPolicyVersions) followed by exploit (SetDefaultPolicyVersion)
+# on the same policy, by the same actor, within 10 minutes. Maps to MITRE ATT&CK T1548.005.
+index=aws_cloudtrail eventName IN ("ListPolicyVersions","SetDefaultPolicyVersion")
+| stats earliest(eventName) as first_action, latest(eventName) as last_action, min(_time) as start_time, max(_time) as end_time, values(eventName) as actions_taken, values(requestParameters.versionId) as versions_touched by userIdentity.arn, requestParameters.policyArn
+| eval duration_sec = end_time - start_time
+| where duration_sec <= 600 AND mvcount(actions_taken) > 1
